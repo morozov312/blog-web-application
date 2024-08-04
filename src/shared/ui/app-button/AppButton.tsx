@@ -1,10 +1,16 @@
+import { ReactNode } from 'react';
+
 interface IAppButtonProps {
-  text?: string;
+  children?: ReactNode;
   onClick?: () => void;
 }
 
-const AppButton = ({ text, onClick }: IAppButtonProps) => {
-  return <button onClick={onClick}>{text}</button>;
+const AppButton = ({ children, onClick }: IAppButtonProps) => {
+  return (
+    <button className='bg-blue-900 px-8 py-3 rounded-xl' onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default AppButton;

@@ -6,7 +6,7 @@ const ArticlesList = async () => {
   const articles = await getAllArticles();
 
   return (
-    <div>
+    <div className='w-full h-full p-8'>
       {articles &&
         articles.map((article: IArticle) => (
           <ArticlePreview key={article.id} article={article} />
