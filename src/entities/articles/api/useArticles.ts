@@ -1,7 +1,11 @@
+import MockImage from './image.png';
+import { StaticImageData } from 'next/image';
+
 export interface IArticle {
   id: number;
   title: string;
   description: string;
+  image: StaticImageData;
 }
 
 const ARTICLES: IArticle[] = [
@@ -10,6 +14,7 @@ const ARTICLES: IArticle[] = [
     title: 'Title',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac molestie purus, eget gravida urna. Praesent ni malesuada odio, et laoreet libero.',
+    image: MockImage,
   },
 ];
 
