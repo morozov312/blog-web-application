@@ -8,13 +8,18 @@ const ArticlePreview = ({ article }: { article: IArticle }) => {
   const router = useRouter();
 
   return (
-    <div className='flex gap-6'>
-      <Image height={253} width={253} src={article.image} alt={''} />
+    <div className='flex flex-col gap-6 md:flex-row'>
+      <Image
+        height={253}
+        width={253}
+        src={article.image}
+        alt={'article image'}
+      />
       <div className='w-1/2 flex flex-col gap-5 items-start'>
         <h2 className='font-bold text-2xl'>{article.title}</h2>
         <span>{article.description}</span>
         <AppButton onClick={() => router.push(`/article/${article.id}`)}>
-          Go
+          Go to Article
         </AppButton>
       </div>
     </div>
