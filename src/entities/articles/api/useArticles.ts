@@ -18,7 +18,7 @@ export const useArticles = () => {
     return Promise.resolve(ARTICLES);
   };
 
-  const getArticleById = (id: number): Promise<IArticle> => {
+  const getArticleById = (id?: number): Promise<IArticle> => {
     return new Promise((resolve, reject) => {
       const article = ARTICLES.find((article) => article.id === id);
 
